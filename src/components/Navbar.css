@@ -1,0 +1,110 @@
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1a1a1a; 
+  border-bottom: 1px solid #333; 
+  font-family: 'Courier New', Courier, monospace; 
+}
+
+.nav-prompt {
+  color: #00ff00; 
+  font-weight: bold;
+  white-space: nowrap; 
+}
+
+.cursor {
+  color: #00ff00;
+  margin-left: 2px;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to { color: transparent }
+  50% { color: #00ff00; }
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #e0e0e0; 
+  text-decoration: none;
+  background-color: transparent; 
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #00ff00; 
+  background-color: transparent;
+}
+
+/* Hide the hamburger button on large screens by default */
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: #00ff00;
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+    position: relative;
+    z-index: 20; 
+  }
+
+  .hamburger-btn {
+    display: block; 
+    order: 1;       
+  }
+
+  .nav-prompt {
+    order: 2;       
+    margin-left: 10px;
+    flex-grow: 1;   
+  }
+
+  /* Transform the horizontal links list into a smooth-dropping drawer */
+  .nav-links {
+    display: flex; /* Kept flex layout active */
+    flex-direction: column;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    width: 100%;
+    background-color: #1a1a1a;
+    border-bottom: 1px solid #333;
+    padding: 0 2rem; /* Keep left/right padding, drop vertical padding to 0 when closed */
+    gap: 1.5rem;
+    box-sizing: border-box;
+    z-index: 10;
+
+    /* 💡 Smooth Animation Setup */
+    max-height: 0;       /* Collapses the container height completely */
+    opacity: 0;          /* Completely transparent */
+    overflow: hidden;    /* Traps the links out of sight */
+    transform: translateY(-10px); /* Subtle upward shift for an elastic drop effect */
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.3s ease-out,
+                transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                padding 0.4s ease;
+  }
+
+  /* 💡 Smoothly Expand when the active state class is attached */
+  .nav-links.open {
+    max-height: 250px;   /* Set this safely higher than the natural content height */
+    opacity: 1;          /* Fades in smoothly */
+    padding: 1.5rem 2rem; /* Applies comfortable vertical space on expansion */
+    transform: translateY(0);    /* Slides down perfectly into its resting grid position */
+  }
+}

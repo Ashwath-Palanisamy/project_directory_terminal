@@ -1,0 +1,124 @@
+.visitor-status {
+    color: #888;
+    margin-top: 0.3rem;
+    margin-bottom: 2rem;
+}
+
+.intro-text {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+}
+
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* --- 🗂️ Individual Project Cards --- */
+.project-card {
+    background-color: #222222;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #444;
+    font-family: 'Courier New', Courier, monospace;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+    border-color: #666;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); 
+}
+
+.card-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid #666;
+}
+
+.card-header h3 {
+    color: #fff;
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+.card-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-desc {
+    color: #e0e0e0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0 0 2rem 0;
+    word-break: break-all;
+}
+
+.card-footer {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.tags {
+    color: #ccc;
+    font-size: 0.85rem;
+}
+
+.read-more {
+    color: #00ff00;
+    background-color: #111;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    display: flex;
+    width: 100%;
+    border-top: 1px solid #444;
+    position: relative;
+    text-decoration: none;
+
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.read-more:hover {
+    background-color: #2a2a2a;
+    border-top-color: #00ff00;
+    color: #33ff33;
+}
+
+
+
+/* --- 📱 Mobile Responsive Styles (Screens under 768px) --- */
+@media (max-width: 768px) {
+    .visitor-status {
+        margin-top: 0.5rem;
+        margin-bottom: 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .intro-text {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}

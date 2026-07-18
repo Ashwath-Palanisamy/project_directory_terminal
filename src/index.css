@@ -1,0 +1,13 @@
+/* 1. Reset margins, padding, and box sizing for EVERY element */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #100c08; 
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+}
+
