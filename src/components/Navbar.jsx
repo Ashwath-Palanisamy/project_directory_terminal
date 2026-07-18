@@ -5,12 +5,12 @@ import { Link, useLocation } from "react-router-dom";
 export default function Navbar() {
     const [PromptText, SetPromptText] = useState('');
     const [menuOpen, setMenuOpen] = useState(false); // Controls mobile menu toggle
-    
+
     let page = useLocation();
     const fullText = page.pathname === '/dashboard' ? "admin@portfolio:~$" : "user@portfolio:~$";
 
     useEffect(() => {
-        SetPromptText(''); 
+        SetPromptText('');
         const typingInterval = setInterval(() => {
             SetPromptText((prev) => {
                 if (prev.length >= fullText.length) {
@@ -19,7 +19,7 @@ export default function Navbar() {
                 }
                 return prev + fullText.charAt(prev.length);
             });
-        }, 100);
+        }, 30);
 
         return () => clearInterval(typingInterval);
     }, [fullText]);
@@ -34,13 +34,14 @@ export default function Navbar() {
             {/* Show navigation prompt */}
             <div className="nav-prompt">
                 {PromptText}<span className="cursor">_</span>
+
             </div>
 
-             {/* Show navigation links  */}
+            {/* Show navigation links  */}
             <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
                 <li><Link to='/' onClick={() => setMenuOpen(false)}>Home</Link></li>
                 <li><Link to='/projects' onClick={() => setMenuOpen(false)}>Project</Link></li>
-                <li><Link to='/about' onClick={()=> setMenuOpen(false)}>About</Link></li>
+                <li><Link to='/about' onClick={() => setMenuOpen(false)}>About</Link></li>
             </ul>
         </nav>
     );

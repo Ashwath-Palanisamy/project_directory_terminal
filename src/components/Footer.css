@@ -1,0 +1,123 @@
+.terminal-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background-color: #1a1a1a; 
+  border-bottom: 1px solid #333; 
+  font-family: 'Courier New', Courier, monospace; 
+  width: auto;
+  margin: 3rem -3rem 0;
+  box-sizing: border-box;
+  align-self: stretch;
+}
+
+
+.footer-prompt {
+  color: #00ff00; 
+  font-weight: bold;
+  white-space: nowrap; 
+}
+
+.footer-content{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1.5rem;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.foo-nav-heading{
+  color: #00ff00;
+  margin: 1rem 0 0 3rem;
+}
+
+.foo-nav-heading::before{
+    content: "> ";
+}
+
+
+
+.footer-links,
+.footer-contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer-links a,
+.footer-contact-list a {
+  color: #e0e0e0;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.contact-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(78%) sepia(88%) saturate(441%) hue-rotate(72deg) brightness(102%) contrast(102%);
+  transition: filter 0.2s ease;
+}
+
+.footer-contact-list li:hover a,
+.footer-links a:hover,
+.footer-contact-list a:hover {
+  color: #00ff00;
+}
+
+.footer-contact-list li:hover .contact-icon {
+  filter: brightness(0) saturate(100%) invert(76%) sepia(99%) saturate(1660%) hue-rotate(71deg) brightness(106%) contrast(108%);
+}
+
+.contact-label {
+  color: #a0a0a0;
+}
+
+.footer-contact-column {
+  margin-left: auto;
+  margin-right: 10rem;
+}
+
+@media (max-width: 768px) {
+  .terminal-footer {
+    width: auto;
+    margin: 2rem -1.5rem 0;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .foo-nav-heading {
+    margin-left: 0;
+  }
+
+  .footer-links,
+  .footer-contact-list {
+    padding-left: 1.5rem;
+  }
+
+  .footer-contact-column {
+    margin-left: 0;
+  }
+}

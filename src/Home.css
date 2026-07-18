@@ -4,7 +4,7 @@
     margin-bottom: 2rem;
 }
 
-.intro-text {
+.intro-text{
     padding-left: 4rem;
     padding-right: 4rem;
     line-height: 1.6;
@@ -60,6 +60,12 @@
     line-height: 1.5;
     margin: 0 0 2rem 0;
     word-break: break-all;
+    max-height: 100px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    line-clamp: 4 !important;
+    overflow: hidden;
 }
 
 .card-footer {
@@ -88,7 +94,6 @@
     border-top: 1px solid #444;
     position: relative;
     text-decoration: none;
-
     transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
@@ -98,6 +103,18 @@
     color: #33ff33;
 }
 
+
+.about-section{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.about-short-intro{
+    padding-left: 4rem;
+    padding-right: 4rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+}
 
 
 /* --- 📱 Mobile Responsive Styles (Screens under 768px) --- */
@@ -121,4 +138,13 @@
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
+
+    .about-short-intro {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        text-align: left;
+    }
+
 }

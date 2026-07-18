@@ -1,5 +1,6 @@
 import React from "react";
 import "./Home.css";
+import Footer from "./components/Footer";
 
 export default function Home() {
     // Hardcoded array matching your Figma cards data structure
@@ -13,7 +14,7 @@ export default function Home() {
         {
             id: 2,
             title: "Project 2",
-            description: "dzflksdflkldskklfsdjkkfsdkfsdkfsdflskdkfsdkfsdfksdfkjsdflsdfsdfksdfklsdfsd",
+            description: "dzflksdflkldskklfsdjkkfsdkfsdkfsdflskdkfsdkfsdfksdfkjsdflsdfsdfksdfklsdfsddzflksdflkldskklfsdjkkfsdkfsdkfsdflskdkfsdkfsdfksdfkjsdflsdfsdfksdfklsdfsddzflksdflkldskklfsdjkkfsdkfsdkfsdflskdkfsdkfsdfksdfkjsdflsdfsdfksdfklsdfsddzflksdflkldskklfsdjkkfsdkfsdkfsdflskdkfsdkfsdfksdfkjsdflsdfsdfksdfklsdfsddzflksdflkldskklfsdjkkfsdkfsdkfsdflskdkfsdkfsdfksdfkjsdflsdfsdfksdfklsdfsddzflksdflkldskklfsdjkkfsdkfsdkfsdflskdkfsdkfsdfksdfkjsdflsdfsdfksdfklsdfsddzflksdflkldskklfsdjkkfsdkfsdkfsdflskdkfsdkfsdfksdfkjsdflsdfsdfksdfklsdfsd",
             tags: "FLUTTER, EXE, GIT"
         },
         {
@@ -31,9 +32,7 @@ export default function Home() {
                 <h1>Welcome to my project directory!</h1>
                 <p className="visitor-status">Logged in as Visitor</p>
                 <p className="intro-text">
-                    Hi, Welcome to my Project Directory! I will update every project i build
-                    and will tell what was difficult with it and how i try to overcome it again,
-                    thanks for viewing this directory if you want to know about me check About page :)
+                    Welcome to my project portfolio. Here, I showcase the applications I build along with the real-world challenges I faced during development and how I solved them. This space acts as a timeline of my practical engineering experience. To learn more about my background and skills, feel free to visit the About section.
                 </p>
             </section>
 
@@ -61,6 +60,17 @@ export default function Home() {
                     ))}
                 </div>
             </section>
+
+            {/* about section - short */}
+            <section className="about-section">
+                <h1>About</h1>
+                <p className="about-short-intro">
+                    Hi i am Ashwath, a Computer Science student specializing in Applied AI, with a passion for building apps. Experienced with Flutter, Dart, Python, Firebase, and Supabase, I am currently learning React to expand my web skills. Seeking an internship to contribute to real-world codebases, learn from a team, and grow.
+                </p>
+            </section>
+
+            {/*Footer - contact and nav*/}
+            <Footer/>
         </>
     );
 }

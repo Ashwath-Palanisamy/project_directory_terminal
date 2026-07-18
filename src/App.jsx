@@ -15,6 +15,7 @@ function App() {
       <div className="terminal-body">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route></Route>
           <Route path="/about" element={<About />} />
         </Routes>
       </div>

@@ -3,6 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
   padding: 1rem 2rem;
   background-color: #1a1a1a; 
   border-bottom: 1px solid #333; 
@@ -10,6 +11,7 @@
 }
 
 .nav-prompt {
+  display: flex;
   color: #00ff00; 
   font-weight: bold;
   white-space: nowrap; 
@@ -21,6 +23,30 @@
   animation: blink 1s step-end infinite;
 }
 
+.input-wrapper {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 8px;     /* Spacing between the prompt text ($ symbol) and input */
+}
+
+.terminal-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #00ff00;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  padding: 0;
+  margin: 0;
+  caret-color: transparent; /* 💡 Hides the browser's native vertical line cursor */
+}
+
+#nav-input {
+  width: calc(var(--char-count, 0) * 1ch + 2px);
+  min-width: 8px; /* Gives you a clickable area even when empty */
+}
+
 @keyframes blink {
   from, to { color: transparent }
   50% { color: #00ff00; }
@@ -30,6 +56,7 @@
   display: flex;
   gap: 2rem;
   list-style: none;
+  animation: fadeInText 0.4s ease-out 0.5s both;
 }
 
 .nav-links a {
@@ -42,6 +69,17 @@
 .nav-links a:hover {
   color: #00ff00; 
   background-color: transparent;
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Hide the hamburger button on large screens by default */
@@ -64,7 +102,13 @@
   }
 
   .hamburger-btn {
-    display: block; 
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    flex: 0 0 2rem;
+    line-height: 1;
     order: 1;       
   }
 

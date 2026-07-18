@@ -8,8 +8,8 @@
 }
 
 .terminal-body {
-  padding: 2.5rem 3rem; 
-  animation: fadeInText 0.4s ease-out 0.5s both; 
+  padding: 2.5rem 3rem 0 3rem; 
+  animation: fadeInText 0.4s ease-out 0.8s both; 
   font-family: 'Courier New', Courier, monospace; 
 }
 
@@ -53,8 +53,13 @@
 
 /* --- 📱 Mobile Responsive Styles (Screens under 768px) --- */
 @media (max-width: 768px) {
+
+  .terminal-frame{
+    margin: 0;
+  }
+
   .terminal-body {
-    padding: 2rem 1.5rem; 
+    padding: 2rem 1.5rem 0 1.5rem; 
   }
 
   .terminal-body h1 {
