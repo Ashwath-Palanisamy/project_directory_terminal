@@ -1,0 +1,138 @@
+.dashboard-container {
+    padding: 2rem;
+}
+
+.login-status {
+    color: #888;
+    margin-top: 0.3rem;
+    margin-bottom: 2rem;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.section-title {
+    margin: 0;
+}
+
+.dashboard-buttons {
+    color: #00ff00;
+    background-color: #111;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.6rem 1.5rem; 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #444; 
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.dashboard-buttons:hover {
+    background-color: #2a2a2a;
+    border-color: #00ff00;
+    color: #33ff33;
+}
+
+
+.popup-modal {
+    background-color: #0d0d0d;
+    border: 1px solid #333;
+    padding: 2.5rem 2rem;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    
+    
+    width: 600px; 
+    max-width: 90vw;                
+    margin: auto;          
+    border-radius: 4px;
+}
+
+.popup-modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(2px);
+}
+
+
+.new-project-form {
+    margin: 2rem 0 1rem 0;
+    display: flex;
+    flex-direction: column; 
+    gap: 1.5rem;
+}
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.form-group label {
+    color: #888; 
+    font-size: 0.95rem;
+}
+
+.new-project-form input {
+    background-color: #141414;
+    color: #00ff00;
+    border: 1px solid #444;
+    padding: 0.6rem 0.8rem;
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    width: 100%; 
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.new-project-form input:focus {
+    border-color: #00ff00;
+    box-shadow: 0 0 4px rgba(0, 255, 0, 0.2);
+}
+
+/* Form Actions / Close Wrapper */
+.form-actions {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+/* 📱 Mobile view overrides */
+@media (max-width: 678px) {
+    .dashboard-container {
+        padding: 1rem;
+    }
+
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+
+    .dashboard-buttons {
+        width: 100%;
+    }
+
+    .add-project-modal {
+        width: 100%;
+        max-width: 100vw;
+        height: 100%;
+        max-height: 100vh;
+        margin: 0;
+        border: none;
+        border-radius: 0;
+        padding: 1.5rem;
+    }
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import Footer from "./components/Footer";
+import Footer from "../components/Footer";
 
 export default function Home() {
     // Hardcoded array matching your Figma cards data structure

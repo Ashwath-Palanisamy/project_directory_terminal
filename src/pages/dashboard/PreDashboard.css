@@ -1,0 +1,58 @@
+.switch-user-wrapper {
+    width: 100%;
+    margin: 4rem 0 4rem 4rem;
+    color: #00ff00;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    gap: 8px; 
+}
+
+.terminal-line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.prompt-text {
+    color: #00ff00;
+    font-weight: bold;
+    margin-right: 8px;
+    white-space: nowrap; 
+}
+
+.terminal-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #00ff00;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    flex: 1; 
+    caret-color: #00ff00; 
+}
+
+.terminal-feedback {
+    font-weight: bold;
+    white-space: pre-wrap;
+}
+
+/*  Added dynamic status coloring for the multi-step form */
+.terminal-feedback.error {
+    color: #ff3333; /* Crimson red text for invalid attempts */
+}
+
+.terminal-feedback.success {
+    color: #00ff00; /* Terminal green text for successful authentication */
+}
+
+@media (max-width: 768px) {
+    .switch-user-wrapper {
+        margin: 1rem;
+        width: 100%;
+    }
+}
