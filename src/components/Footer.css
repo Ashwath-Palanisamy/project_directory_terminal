@@ -3,16 +3,15 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 0.5rem;
-  padding: 1rem 2rem;
+  padding: 1.5rem 2rem; 
   background-color: #1a1a1a; 
-  border-bottom: 1px solid #333; 
+  border-top: 1px solid #333; 
   font-family: 'Courier New', Courier, monospace; 
-  width: auto;
-  margin: 3rem -3rem 0;
+  width: 100%; 
   box-sizing: border-box;
   align-self: stretch;
+  margin-top: 3rem; 
 }
-
 
 .footer-prompt {
   color: #00ff00; 
@@ -20,7 +19,7 @@
   white-space: nowrap; 
 }
 
-.footer-content{
+.footer-content {
   display: flex;
   width: 100%;
   flex-direction: row;
@@ -35,22 +34,20 @@
   gap: 0.75rem;
 }
 
-.foo-nav-heading{
+.foo-nav-heading {
   color: #00ff00;
-  margin: 1rem 0 0 3rem;
+  margin: 1rem 0 0 2rem; 
 }
 
-.foo-nav-heading::before{
-    content: "> ";
+.foo-nav-heading::before {
+  content: "> ";
 }
-
-
 
 .footer-links,
 .footer-contact-list {
   list-style: none;
-  margin: 0;
-  padding: 0 0 0 6rem;
+  margin-left: 4rem;
+  padding: 0 0 0 1.5rem; 
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
@@ -94,18 +91,20 @@
 
 .footer-contact-column {
   margin-left: auto;
-  margin-right: 10rem;
+  margin-right: 4rem; 
 }
 
+/* 📱 Mobile view overrides */
 @media (max-width: 768px) {
   .terminal-footer {
-    width: auto;
-    margin: 2rem -1.5rem 0;
+    width: 100%;
+    margin: 2rem 0 0 0; 
+    padding: 1.5rem 1rem; 
   }
 
   .footer-content {
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
   .foo-nav-heading {
@@ -114,10 +113,12 @@
 
   .footer-links,
   .footer-contact-list {
-    padding-left: 1.5rem;
+    padding-left: 1rem;
+    margin: 0;
   }
 
   .footer-contact-column {
     margin-left: 0;
+    margin-right: 0; 
   }
 }

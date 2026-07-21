@@ -40,7 +40,7 @@ export default function Navbar() {
             {/* Show navigation links  */}
             <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
                 <li><Link to='/' onClick={() => setMenuOpen(false)}>Home</Link></li>
-                <li><Link to='/projects' onClick={() => setMenuOpen(false)}>Project</Link></li>
+                <li><Link to='/projects' onClick={() => setMenuOpen(false)}>Projects</Link></li>
                 <li><Link to='/about' onClick={() => setMenuOpen(false)}>About</Link></li>
                 <li><Link to='/predashboard' onClick={() => setMenuOpen(false)}> Dashboard</Link></li>
             </ul>

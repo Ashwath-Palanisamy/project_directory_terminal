@@ -1,19 +1,18 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Outlet } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import "./App.css";
 import Home from "./pages/Home";
 import PreDashboard from "./pages/dashboard/PreDashboard";
 import ProtectedRoute from "./auth/ProtectedRoute";
 import Dashboard from "./pages/dashboard/Dashboard";
+import Projects from "./pages/Projects";
+import ProjectDetail from "./pages/ProjectDetails";
+import Footer from "./components/Footer";
+import PageTransition from "./components/PageTransition";
+import About from "./pages/About";
 
-function About() {
-  return <h1>About</h1>;
-}
 
-function Projects() {
-  return <h1>projects</h1>;
-}
 
 function App() {
   return (
@@ -21,22 +20,26 @@ function App() {
       <Navbar />
       <div className="terminal-body">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path='/projects' element={<Projects/>}/>
-          <Route path="/about" element={<About />} />
-          <Route path="/predashboard" element={<PreDashboard/>}/>
-          
-          {/*  Protected Route mapping */}
-          <Route 
-            path="/dashboard" 
-            element={
-              <ProtectedRoute>
-                <Dashboard />
-              </ProtectedRoute>
-            } 
-          />
+          <Route element={<PageTransition><Outlet/></PageTransition>}>
+            <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/predashboard" element={<PreDashboard />} />
+            <Route path="/project/:id" element={<ProjectDetail />} />
+            
+            {/* Protected Route */}
+            <Route 
+              path="/dashboard" 
+              element={
+                <ProtectedRoute>
+                  <Dashboard />
+                </ProtectedRoute>
+              } 
+            />
+          </Route>
         </Routes>
       </div>
+      <Footer />
     </div>
   );
 }

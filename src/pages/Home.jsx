@@ -1,30 +1,10 @@
 import React from "react";
 import "./Home.css";
 import Footer from "../components/Footer";
+import projectsData from "../data/ProjectData.js";
 
 export default function Home() {
-    // Hardcoded array matching your Figma cards data structure
-    const projects = [
-        {
-            id: 1,
-            title: "Project onet",
-            description: "dzflksdflkldskklfsdjkkfsdkfsdkfsdflskdkfsdkfsdfksdfkjsdflsdfsdfksdfklsdfsd",
-            tags: "FLUTTER, EXE, GIT"
-        },
-        {
-            id: 2,
-            title: "Project 2",
-            description: "dzflksdflkldskklfsdjkkfsdkfsdkfsdflskdkfsdkfsdfksdfkjsdflsdfsdfksdfklsdfsddzflksdflkldskklfsdjkkfsdkfsdkfsdflskdkfsdkfsdfksdfkjsdflsdfsdfksdfklsdfsddzflksdflkldskklfsdjkkfsdkfsdkfsdflskdkfsdkfsdfksdfkjsdflsdfsdfksdfklsdfsddzflksdflkldskklfsdjkkfsdkfsdkfsdflskdkfsdkfsdfksdfkjsdflsdfsdfksdfklsdfsddzflksdflkldskklfsdjkkfsdkfsdkfsdflskdkfsdkfsdfksdfkjsdflsdfsdfksdfklsdfsddzflksdflkldskklfsdjkkfsdkfsdkfsdflskdkfsdkfsdfksdfkjsdflsdfsdfksdfklsdfsddzflksdflkldskklfsdjkkfsdkfsdkfsdflskdkfsdkfsdfksdfkjsdflsdfsdfksdfklsdfsd",
-            tags: "FLUTTER, EXE, GIT"
-        },
-        {
-            id: 3,
-            title: "Project 3 title",
-            description: "dzflksdflkldskklfsdjkkfsdkfsdkfsdflskdkfsdkfsdfksdfkjsdflsdfsdfksdfklsdfsd",
-            tags: "FLUTTER, EXE, GIT"
-        }
-    ];
-
+    
     return (
         <>
             {/* Welcome */}
@@ -42,7 +22,7 @@ export default function Home() {
 
                 {/* Responsive Grid Container */}
                 <div className="projects-grid">
-                    {projects.map((project) => (
+                    {projectsData.slice(0,3).map((project) => (
                         <div key={project.id} className="project-card">
                             <div className="card-header">
                                 <h3>{project.title}</h3>
@@ -50,7 +30,7 @@ export default function Home() {
                             <div className="card-body">
                                 <p className="card-desc">{project.description}</p>
                                 <div className="card-footer">
-                                    <span className="tags">Tags: {project.tags}</span>
+                                    <span className="tags">Tags: {project.tags.join(", ")}</span>
                                 </div>
 
                             </div>
@@ -68,9 +48,6 @@ export default function Home() {
                     Hi i am Ashwath, a Computer Science student specializing in Applied AI, with a passion for building apps. Experienced with Flutter, Dart, Python, Firebase, and Supabase, I am currently learning React to expand my web skills. Seeking an internship to contribute to real-world codebases, learn from a team, and grow.
                 </p>
             </section>
-
-            {/*Footer - contact and nav*/}
-            <Footer/>
         </>
     );
 }
