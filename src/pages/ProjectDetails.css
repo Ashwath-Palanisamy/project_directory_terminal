@@ -1,111 +1,146 @@
+/* --- Project Detail Layout --- */
 .project-detail-container {
-    padding: 1rem;
-    font-family: 'Courier New', Courier, monospace;
-    color: #fff;
-    min-height: 80vh;
+  min-height: 80vh;
+  padding: 1rem;
+  color: #ffffff;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-.error-view h2 {
-    color: #ff3333;
-    /* Crimson alert tone for terminal errors */
-    margin-bottom: 1rem;
-}
-
+/* --- Back Link --- */
 .back-link {
-    color: #888;
-    text-decoration: none;
-    font-size: 0.95rem;
-    transition: color 0.2s ease;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: #888888;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .back-link:hover {
-    color: #00ff00;
+  color: #00ff00;
 }
 
-.error-link {
-    color: #00ff00;
-}
-
+/* --- Titles & Headers --- */
 .project-folder {
-    color: #00ff00;
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-    font-size: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #00ff00;
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
 .project-main-title {
-    margin-top: 0;
-    margin-bottom: 1.5rem;
-    color: #fff;
-    font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: normal;
 }
 
-.project-info{
-   display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 0.6rem;
+/* --- Badges & Actions Row --- */
+.project-info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 
-.project-info-badge{
-    background-color: #0d0d0d;
-    border: 1px solid #444;
-    padding: 0.3rem 0.6rem;
-    color: #33ff33;
-    font-size: 0.85rem;
-    border-radius: 2px;
-    transition: border-color 0.2s ease;
+.project-info-badge {
+  padding: 0.4rem 0.8rem;
+  color: #33ff33;
+  background-color: rgba(0, 255, 0, 0.05);
+  border: 1px solid #00ff00;
+  border-radius: 2px;
+  font-size: 0.85rem;
 }
 
-.project-info-badge:hover {
-    border-color: #33ff33;
+/* --- Styled Link Buttons --- */
+.project-links {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 }
 
+.project-link-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.8rem;
+  color: #00ff00;
+  background-color: #0d0d0d;
+  border: 1px solid #444444;
+  border-radius: 2px;
+  font-size: 0.85rem;
+  text-decoration: none;
+  font-family: monospace;
+  transition: all 0.2s ease;
+}
+
+.project-link-btn:hover {
+  color: #000000;
+  background-color: #00ff00;
+  border-color: #00ff00;
+}
+
+/* --- Main Description --- */
 .project-full-desc {
-    color: #ccc;
-    line-height: 1.6;
-    max-width: 100%;
-    font-size: 1rem;
+  max-width: 900px;
+  margin-bottom: 2.5rem;
+  color: #cccccc;
+  font-size: 1rem;
+  line-height: 1.7;
 }
 
+/* --- Technologies Used Section --- */
 .tech-section {
-    margin-top: 2.5rem;
+  margin-top: 2.5rem;
 }
 
 .tech-section strong {
-    color: #888;
-    font-size: 0.95rem;
+  display: block;
+  margin-bottom: 0.75rem;
+  color: #888888;
+  font-size: 0.95rem;
 }
 
 .tech-badges-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 0.6rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
 }
 
 .tech-spec-badge {
-    background-color: #0d0d0d;
-    border: 1px solid #444;
-    padding: 0.3rem 0.6rem;
-    color: #33ff33;
-    font-size: 0.85rem;
-    border-radius: 2px;
-    transition: border-color 0.2s ease;
+  padding: 0.35rem 0.7rem;
+  color: #33ff33;
+  background-color: #0d0d0d;
+  border: 1px solid #333333;
+  border-radius: 2px;
+  font-size: 0.85rem;
+  transition: border-color 0.2s ease;
 }
 
 .tech-spec-badge:hover {
-    border-color: #33ff33;
+  border-color: #33ff33;
 }
 
-/* 📱 Optional Mobile Responsive adjustments */
+/* --- Mobile Adjustments --- */
 @media (max-width: 678px) {
-    .project-detail-container {
-        padding: 1.5rem 1rem;
-        background-color: transparent;
-    }
+  .project-detail-container {
+    padding: 0.5rem;
+  }
 
-    .project-folder {
-        font-size: 1.4rem;
-    }
+  .project-folder {
+    font-size: 1.4rem;
+  }
+
+  .project-main-title {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .project-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
 }

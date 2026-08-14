@@ -1,24 +1,22 @@
 .terminal-frame {
-  margin: 2rem; 
+  margin: 2rem;
+  border: 1px solid #333333;
   border-radius: 10px;
-  border: 1px solid #333; 
-  background-color: #0d0d0d; 
+  background-color: #0d0d0d;
   overflow: hidden;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
 }
 
 .terminal-body {
-  padding: 2.5rem 3rem 0 3rem; 
-  animation: fadeInText 0.4s ease-out 0.8s both; 
-  font-family: 'Courier New', Courier, monospace; 
+  padding: 2.5rem 3rem 0 3rem;
+  font-family: 'Courier New', Courier, monospace;
+  animation: fadeInText 0.4s ease-out 0.8s both;
 }
 
 .terminal-body h1 {
+  margin: 0 0 1rem 0;
   color: #00ff00;
-  font-family: 'Courier New', Courier, monospace;
-  margin: 0; 
   font-size: 1.8rem;
-  margin-bottom: 1rem;
 }
 
 .terminal-body h1::before {
@@ -27,16 +25,14 @@
 }
 
 .visitor-status {
-  color: #888;
-  margin-top: 0.3rem;
-  margin-bottom: 2rem;
+  margin: 0.3rem 0 2rem 0;
+  color: #888888;
 }
 
-.intro-text{
-  padding-left: 4rem;
-  padding-right: 4rem;
-  line-height: 1.6;
+.intro-text {
+  padding: 0 4rem;
   margin-bottom: 3rem;
+  line-height: 1.6;
 }
 
 /* --- Animation Keyframes --- */
@@ -51,26 +47,25 @@
   }
 }
 
-/* --- 📱 Mobile Responsive Styles (Screens under 768px) --- */
+/* --- 📱 Mobile Responsiveness --- */
 @media (max-width: 768px) {
-
-  .terminal-frame{
+  .terminal-frame {
     margin: 0;
   }
 
   .terminal-body {
-    padding: 2rem 1.5rem 0 1.5rem; 
+    padding: 2rem 1.5rem 0 1.5rem;
   }
 
   .terminal-body h1 {
-
-    font-size: 1.35rem; 
     display: inline-block;
     width: 100%;
+    font-size: 1.35rem;
   }
+
   .terminal-body h1::before {
-    white-space: nowrap;
     display: inline;
+    white-space: nowrap;
   }
 
   .visitor-status {
@@ -80,12 +75,9 @@
   }
 
   .intro-text {
-    padding-left: 0 !important; /* Strips away the large desktop indent */
-    padding-right: 0 !important;
-    font-size: 0.9rem;          /* Scales down font slightly for better reading */
-    line-height: 1.5;           /* Keeps line breaks clean and spacious */
-    text-align: left;           
+    padding: 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    text-align: left;
   }
-
-  
 }

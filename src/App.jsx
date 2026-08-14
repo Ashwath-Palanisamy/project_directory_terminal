@@ -5,7 +5,7 @@ import "./App.css";
 import Home from "./pages/Home";
 import PreDashboard from "./pages/dashboard/PreDashboard";
 import ProtectedRoute from "./auth/ProtectedRoute";
-import Dashboard from "./pages/dashboard/Dashboard";
+import Dashboard from "./pages/dashboard/Dashboard.jsx";
 import Projects from "./pages/Projects";
 import ProjectDetail from "./pages/ProjectDetails";
 import Footer from "./components/Footer";
@@ -17,6 +17,7 @@ import About from "./pages/About";
 function App() {
   return (
     <div className="terminal-frame">
+      <title>Ashwath | Project Directory</title>
       <Navbar />
       <div className="terminal-body">
         <Routes>

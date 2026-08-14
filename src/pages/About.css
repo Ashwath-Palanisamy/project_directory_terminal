@@ -1,0 +1,149 @@
+.about-container {
+  padding: 1rem 0;
+}
+
+.name-section,
+.summary-section,
+.bio-section,
+.tech-stack-section,
+.actions-section {
+  margin-bottom: 2.5rem;
+}
+
+.about-container h1 {
+  color: #00ff00;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-family: monospace;
+}
+
+.name-section h1 {
+  margin-top: 0;
+}
+
+.name-row,
+.summary-card,
+.bio-section p,
+.action-buttons {
+  margin-left: 1rem;
+}
+
+.name-row {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  color: #ffffff;
+}
+
+.summary-card p,
+.bio-section p {
+  line-height: 1.6;
+  color: #cccccc;
+  margin-bottom: 1rem;
+}
+
+.tech-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  margin-left: 0;
+  font-family: monospace;
+}
+
+.tech-table th, 
+.tech-table td {
+  border: 1px solid #222;
+  padding: 0.8rem 1rem;
+  text-align: left;
+}
+
+.tech-table th {
+  color: #00ff00;
+  border-bottom: 2px solid #00ff00;
+  background-color: rgba(0, 255, 0, 0.05);
+}
+
+.tech-table tr {
+  transition: background-color 0.2s ease;
+}
+
+.tech-table tr:hover {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.tech-table td:first-child {
+  color: #00ff00;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.tech-table td:last-child {
+  color: #cccccc;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.terminal-btn {
+  color: #00ff00;
+  border: 1px solid #00ff00;
+  padding: 0.6rem 1.2rem;
+  text-decoration: none;
+  font-family: monospace;
+  background: rgba(0, 255, 0, 0.05);
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.terminal-btn:hover {
+  background: #00ff00;
+  color: #000;
+}
+
+.terminal-icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  object-fit: contain;
+  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+  transition: filter 0.2s ease;
+}
+
+.terminal-btn:hover .terminal-icon {
+  filter: brightness(0);
+}
+
+@media (max-width: 678px) {
+  .name-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .name-row,
+  .summary-card,
+  .bio-section p,
+  .action-buttons {
+    margin-left: 0.5rem;
+  }
+
+  .tech-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .tech-table th, 
+  .tech-table td {
+    padding: 0.6rem 0.8rem;
+  }
+
+  .tech-table td:first-child {
+    white-space: normal;
+  }
+}
