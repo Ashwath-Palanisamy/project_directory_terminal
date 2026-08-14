@@ -17,7 +17,6 @@ import About from "./pages/About";
 function App() {
   return (
     <div className="terminal-frame">
-      <title>Ashwath | Project Directory</title>
       <Navbar />
       <div className="terminal-body">
         <Routes>
