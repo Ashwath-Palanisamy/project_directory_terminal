@@ -89,6 +89,8 @@
   color: #cccccc;
   font-size: 1rem;
   line-height: 1.7;
+  white-space: pre-wrap;    /* Preserves newlines and spaces */
+  word-break: break-word;   /* Prevents horizontal overflow on small screens */
 }
 
 /* --- Technologies Used Section --- */

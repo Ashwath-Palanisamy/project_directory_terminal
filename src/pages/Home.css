@@ -10,6 +10,8 @@
   padding: 0 4rem;
   line-height: 1.6;
   margin-bottom: 3rem;
+  white-space: pre-wrap;    /* Preserves newlines and spaces */
+  word-break: break-word;   /* Prevents overflow */
 }
 
 .about-section {
@@ -67,6 +69,8 @@
   max-height: 100px;
   overflow: hidden;
   overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: pre-wrap;    /* Preserves newlines in card previews */
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
