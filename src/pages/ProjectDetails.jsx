@@ -65,11 +65,12 @@ export default function ProjectDetail() {
             
             <h2 className="project-main-title">{project.title}</h2>
             
+            {/* Top row: Badges and Action Links */}
             <div className="project-info">
                 <span className="project-info-badge">
                     Availability: {project.availability}
                 </span>
-                
+
                 {project.links && Object.keys(project.links).length > 0 && (
                     <div className="project-links">
                         {Object.entries(project.links).map(([platform, url]) => (
@@ -86,11 +87,8 @@ export default function ProjectDetail() {
                     </div>
                 )}
             </div>
-            
-            <p className="project-full-desc">
-                {project.description}
-            </p>
 
+            {/* Technologies Used Section */}
             {techList.length > 0 && (
                 <div className="tech-section">
                     <strong>Technologies used:</strong>
@@ -103,6 +101,11 @@ export default function ProjectDetail() {
                     </div>
                 </div>
             )}
+            
+            
+            <p className="project-full-desc">
+                {project.description}
+            </p>
         </div>
     );
 }
